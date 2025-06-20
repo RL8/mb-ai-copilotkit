@@ -3,6 +3,7 @@ import { BaseAgent } from './base-agent';
 import { AgenticChatAgent } from './agentic-chat';
 import { GenerativeUIAgent } from './generative-ui';
 import { HumanLoopAgent } from './human-loop';
+import { PredictiveStateAgent } from './predictive-state';
 
 export class AgentRouter {
   private agents: Map<AgentType, BaseAgent> = new Map();
@@ -25,9 +26,9 @@ export class AgentRouter {
     this.agents.set('agentic_chat', new AgenticChatAgent());
     this.agents.set('generative_ui', new GenerativeUIAgent());
     this.agents.set('human_loop', new HumanLoopAgent());
+    this.agents.set('predictive_state', new PredictiveStateAgent());
     
     // Placeholder for future agents (will be implemented in later phases)
-    // this.agents.set('predictive_state', new PredictiveStateAgent());
     // this.agents.set('shared_state', new SharedStateAgent());
     // this.agents.set('tool_ui', new ToolUIAgent());
   }

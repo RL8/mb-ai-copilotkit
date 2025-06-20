@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { AgentSelector } from '@/components/AgentSelector';
 import { useAgent } from '@/hooks/useAgent';
 import { AgentType } from '@/types/agent-types';
+import Link from 'next/link';
 
 export default function AgentsPage() {
   const router = useRouter();
@@ -94,8 +95,14 @@ export default function AgentsPage() {
               <span className="text-sm">Phase 3: Human in Loop - <strong>Implemented</strong></span>
             </div>
             <div className="flex items-center space-x-2">
+              <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs">✓</span>
+              </div>
+              <span className="text-sm">Phase 4: Predictive State - <strong>Implemented</strong></span>
+            </div>
+            <div className="flex items-center space-x-2">
               <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
-              <span className="text-sm text-gray-600">Phases 4-6: Advanced Features - Coming Next</span>
+              <span className="text-sm text-gray-600">Phases 5-6: Advanced Features - Coming Next</span>
             </div>
           </div>
         </div>
@@ -146,6 +153,25 @@ export default function AgentsPage() {
             <p>4. Verify functionality both locally and on Vercel deployment</p>
             <p>5. Ready to proceed to Phase 4 once testing is complete</p>
           </div>
+        </div>
+
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold mb-3">🔮 Phase 4: Predictive State Agent</h3>
+          <p className="text-gray-600 mb-4">
+            Future-aware AI that analyzes current conditions to forecast likely scenarios and provide proactive recommendations.
+          </p>
+          <div className="space-y-2 mb-4">
+            <div className="text-sm text-green-600 font-medium">✅ Status: Implemented & Available</div>
+            <div className="text-sm text-gray-500">
+              <strong>Capabilities:</strong> Future state prediction, pattern recognition, proactive suggestions, risk assessment
+            </div>
+          </div>
+          <Link
+            href="/agents/predictive_state"
+            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+          >
+            Try Predictive State Agent →
+          </Link>
         </div>
       </div>
     </div>
