@@ -88,18 +88,20 @@ export default function AgentsPage() {
               <span className="text-sm">Phase 2: Generative UI - <strong>Implemented</strong></span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
-              <span className="text-sm text-gray-600">Phase 3: Human in Loop - Coming Next</span>
+              <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs">✓</span>
+              </div>
+              <span className="text-sm">Phase 3: Human in Loop - <strong>Implemented</strong></span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
-              <span className="text-sm text-gray-600">Phases 4-6: Advanced Features</span>
+              <span className="text-sm text-gray-600">Phases 4-6: Advanced Features - Coming Next</span>
             </div>
           </div>
         </div>
 
         {/* Quick Actions */}
-        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4">
           <button
             onClick={() => goToAgentDemo('agentic_chat')}
             disabled={!availableAgents.includes('agentic_chat')}
@@ -107,7 +109,7 @@ export default function AgentsPage() {
           >
             <h3 className="font-semibold text-blue-600 mb-2">💬 Try Agentic Chat</h3>
             <p className="text-sm text-gray-600">
-              Experience enhanced conversational AI with advanced reasoning and memory
+              Enhanced conversational AI with advanced reasoning
             </p>
           </button>
 
@@ -118,19 +120,31 @@ export default function AgentsPage() {
           >
             <h3 className="font-semibold text-purple-600 mb-2">🎨 Try Generative UI</h3>
             <p className="text-sm text-gray-600">
-              Create dynamic React components with AI-powered code generation
+              Create dynamic React components with AI
+            </p>
+          </button>
+
+          <button
+            onClick={() => goToAgentDemo('human_loop')}
+            disabled={!availableAgents.includes('human_loop')}
+            className="p-4 bg-white border rounded-lg hover:bg-gray-50 transition-colors text-left"
+          >
+            <h3 className="font-semibold text-green-600 mb-2">🤝 Try Human-in-Loop</h3>
+            <p className="text-sm text-gray-600">
+              Collaborative workflows with approval gates
             </p>
           </button>
         </div>
 
         {/* Instructions */}
         <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-          <h3 className="text-lg font-semibold text-green-800 mb-2">📋 Phase 2 Ready for Testing</h3>
+          <h3 className="text-lg font-semibold text-green-800 mb-2">📋 Phase 3 Ready for Testing</h3>
           <div className="text-sm text-green-700 space-y-1">
-            <p>1. Test both <strong>Agentic Chat</strong> and <strong>Generative UI</strong> agents</p>
-            <p>2. Try the UI generation features - ask for forms, buttons, cards, etc.</p>
-            <p>3. Verify functionality both locally and on Vercel deployment</p>
-            <p>4. Ready to proceed to Phase 3 once testing is complete</p>
+            <p>1. Test all three agents: <strong>Agentic Chat</strong>, <strong>Generative UI</strong>, and <strong>Human-in-Loop</strong></p>
+            <p>2. Try approval workflows - create processes that need human oversight</p>
+            <p>3. Test UI generation and collaborative decision-making</p>
+            <p>4. Verify functionality both locally and on Vercel deployment</p>
+            <p>5. Ready to proceed to Phase 4 once testing is complete</p>
           </div>
         </div>
       </div>
