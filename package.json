@@ -13,12 +13,18 @@
     "@copilotkit/react-core": "^1.9.1",
     "@copilotkit/react-ui": "^1.9.1",
     "@copilotkit/runtime": "^1.9.1",
+    "@langchain/core": "^0.3.56",
+    "@langchain/community": "^0.3.43",
+    "@langchain/langgraph-sdk": "^0.0.78",
     "@langchain/openai": "^0.5.13",
     "langchain": "^0.3.28",
     "next": "15.3.4",
     "openai": "^4.104.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.48.2",
+    "uuid": "^9.0.1",
+    "zustand": "^4.4.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -26,6 +32,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/uuid": "^9.0.7",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
     "tailwindcss": "^4",

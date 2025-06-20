@@ -3,9 +3,7 @@
 import { CopilotKit } from "@copilotkit/react-core";
 import { CopilotChat } from "@copilotkit/react-ui";
 import { Version } from "@/components/Version";
-import Image from "next/image";
 
-{/* GitHub-to-Vercel integration test - deployment working! */}
 export default function Home() {
   return (
     <CopilotKit runtimeUrl="/api/copilotkit">
@@ -32,6 +30,19 @@ export default function Home() {
               </div>
               
               <div className="bg-white p-4 rounded-lg shadow-sm">
+                <h3 className="font-medium text-gray-800 mb-2">🤖 New: Agent System</h3>
+                <p className="text-sm text-gray-600 mb-3">
+                  Explore specialized AI agents for different tasks!
+                </p>
+                <a 
+                  href="/agents" 
+                  className="inline-block px-4 py-2 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition-colors"
+                >
+                  Explore Agents →
+                </a>
+              </div>
+              
+              <div className="bg-white p-4 rounded-lg shadow-sm">
                 <h3 className="font-medium text-gray-800 mb-2">💡 Try These:</h3>
                 <ul className="text-sm text-gray-600 space-y-1">
                   <li>• &ldquo;Hello, how are you?&rdquo;</li>
@@ -45,7 +56,7 @@ export default function Home() {
                 <h3 className="font-medium text-gray-800 mb-2">⚙️ Status</h3>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600">Chat Ready</span>
+                  <span className="text-sm text-gray-600">Multi-Agent System Ready</span>
                 </div>
               </div>
             </div>
