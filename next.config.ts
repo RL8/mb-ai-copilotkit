@@ -6,10 +6,8 @@ const nextConfig: NextConfig = {
     NEXT_PUBLIC_BUILD_DATE: new Date().toISOString(),
     NEXT_PUBLIC_VERSION: process.env.npm_package_version || '1.0.0',
   },
-  // Automatically populate Git commit SHA from Vercel
-  experimental: {
-    serverComponentsExternalPackages: [],
-  },
+  // External packages for server components
+  serverExternalPackages: [],
 };
 
 export default nextConfig;

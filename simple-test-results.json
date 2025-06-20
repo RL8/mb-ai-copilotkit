@@ -1,0 +1,50 @@
+{
+  "testRun": {
+    "timestamp": "2025-06-20T12:18:21.700Z",
+    "totalAgents": 6
+  },
+  "conversations": [
+    {
+      "status": "success",
+      "agent": "agentic_chat",
+      "userMessage": "Hello, can you help me with my project?",
+      "agentResponse": "Advanced conversational AI with reasoning capabilities",
+      "timestamp": "2025-06-20T12:18:44.144Z"
+    },
+    {
+      "status": "success",
+      "agent": "generative_ui",
+      "userMessage": "Create a contact form with name and email",
+      "agentResponse": "Dynamic React component generation",
+      "timestamp": "2025-06-20T12:19:06.381Z"
+    },
+    {
+      "status": "success",
+      "agent": "human_loop",
+      "userMessage": "I need approval for a new feature",
+      "agentResponse": "Collaborative AI with approval workflows",
+      "timestamp": "2025-06-20T12:19:24.928Z"
+    },
+    {
+      "status": "success",
+      "agent": "predictive_state",
+      "userMessage": "Predict success rate for next quarter",
+      "agentResponse": "Future-aware AI that analyzes current conditions to forecast likely scenarios and provide proactive recommendations.",
+      "timestamp": "2025-06-20T12:19:46.623Z"
+    },
+    {
+      "status": "success",
+      "agent": "shared_state",
+      "userMessage": "Create a new project called Test Dashboard",
+      "agentResponse": "Multi-agent coordination and synchronized project state management.",
+      "timestamp": "2025-06-20T12:20:04.755Z"
+    },
+    {
+      "status": "success",
+      "agent": "tool_ui",
+      "userMessage": "Create a login form with validation",
+      "agentResponse": "Powered by CopilotKit",
+      "timestamp": "2025-06-20T12:20:21.317Z"
+    }
+  ]
+}

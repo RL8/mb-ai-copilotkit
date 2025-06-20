@@ -1,6 +1,6 @@
 import { BaseAgent } from './base-agent';
 import { AGENT_CONFIGS } from '@/types/agent-types';
-import type { AgentResponse, AgentState } from '@/types/agent-types';
+import type { AgentResponse } from '@/types/agent-types';
 
 interface Prediction {
   id: string;
@@ -51,7 +51,7 @@ Guidelines:
     ];
   }
 
-  async processMessage(message: string, _state: AgentState): Promise<AgentResponse> {
+  async processMessage(message: string): Promise<AgentResponse> {
     try {
       if (!this.validateInput(message)) {
         return this.createResponse(

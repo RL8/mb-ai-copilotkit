@@ -1,0 +1,44 @@
+{
+  "testRun": {
+    "timestamp": "2025-06-20T12:55:31.246Z",
+    "totalAgents": 6,
+    "purpose": "Validate actual agent responses to specific inputs"
+  },
+  "results": [
+    {
+      "status": "no_input",
+      "agent": "agentic_chat",
+      "issue": "Chat interface not found"
+    },
+    {
+      "status": "no_response",
+      "agent": "generative_ui",
+      "userMessage": "Create a contact form with name, email and message fields",
+      "issue": "AI did not respond within timeout"
+    },
+    {
+      "status": "no_response",
+      "agent": "human_loop",
+      "userMessage": "I need approval to implement user authentication system",
+      "issue": "AI did not respond within timeout"
+    },
+    {
+      "status": "no_response",
+      "agent": "predictive_state",
+      "userMessage": "What are the likely outcomes if we launch this feature next month?",
+      "issue": "AI did not respond within timeout"
+    },
+    {
+      "status": "no_response",
+      "agent": "shared_state",
+      "userMessage": "Create a project called Customer Portal and add initial tasks",
+      "issue": "AI did not respond within timeout"
+    },
+    {
+      "status": "no_response",
+      "agent": "tool_ui",
+      "userMessage": "Generate a login form with email validation and password strength indicator",
+      "issue": "AI did not respond within timeout"
+    }
+  ]
+}
