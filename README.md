@@ -2,6 +2,9 @@
 
 This is a Next.js project with CopilotKit integration.
 
+## 🆕 Version System Added
+This app now displays version information (build date + git commit) in the bottom-right corner to track deployments.
+
 ## Deployment
 
 This project is configured for automatic deployment via GitHub integration with Vercel.
