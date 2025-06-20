@@ -4,6 +4,7 @@ import { AgenticChatAgent } from './agentic-chat';
 import { GenerativeUIAgent } from './generative-ui';
 import { HumanLoopAgent } from './human-loop';
 import { PredictiveStateAgent } from './predictive-state';
+import { SharedStateAgent } from './shared-state';
 
 export class AgentRouter {
   private agents: Map<AgentType, BaseAgent> = new Map();
@@ -27,9 +28,9 @@ export class AgentRouter {
     this.agents.set('generative_ui', new GenerativeUIAgent());
     this.agents.set('human_loop', new HumanLoopAgent());
     this.agents.set('predictive_state', new PredictiveStateAgent());
+    this.agents.set('shared_state', new SharedStateAgent());
     
     // Placeholder for future agents (will be implemented in later phases)
-    // this.agents.set('shared_state', new SharedStateAgent());
     // this.agents.set('tool_ui', new ToolUIAgent());
   }
 
@@ -91,7 +92,7 @@ export class AgentRouter {
 
   async switchAgent(newAgent: AgentType): Promise<void> {
     if (!this.agents.has(newAgent)) {
-      throw new Error(`Agent ${newAgent} is not available yet. Currently 'agentic_chat', 'generative_ui', and 'human_loop' are implemented.`);
+      throw new Error(`Agent ${newAgent} is not available yet. Currently 'agentic_chat', 'generative_ui', 'human_loop', 'predictive_state', and 'shared_state' are implemented.`);
     }
 
     const previousAgent = this.currentAgent;

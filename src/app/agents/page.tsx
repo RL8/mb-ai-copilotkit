@@ -94,16 +94,22 @@ export default function AgentsPage() {
               </div>
               <span className="text-sm">Phase 3: Human in Loop - <strong>Implemented</strong></span>
             </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-xs">✓</span>
+                          <div className="flex items-center space-x-2">
+                <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </div>
+                <span className="text-sm">Phase 4: Predictive State - <strong>Implemented</strong></span>
               </div>
-              <span className="text-sm">Phase 4: Predictive State - <strong>Implemented</strong></span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
-              <span className="text-sm text-gray-600">Phases 5-6: Advanced Features - Coming Next</span>
-            </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </div>
+                <span className="text-sm">Phase 5: Shared State - <strong>Implemented</strong></span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
+                <span className="text-sm text-gray-600">Phase 6: Tool-based UI - Coming Next</span>
+              </div>
           </div>
         </div>
 
@@ -171,6 +177,25 @@ export default function AgentsPage() {
             className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
           >
             Try Predictive State Agent →
+          </Link>
+        </div>
+
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold mb-3">🤝 Phase 5: Shared State Agent</h3>
+          <p className="text-gray-600 mb-4">
+            Multi-agent coordination with synchronized state management for collaborative workflows and team coordination.
+          </p>
+          <div className="space-y-2 mb-4">
+            <div className="text-sm text-green-600 font-medium">✅ Status: Implemented & Available</div>
+            <div className="text-sm text-gray-500">
+              <strong>Capabilities:</strong> Project management, task coordination, state synchronization, multi-agent collaboration
+            </div>
+          </div>
+          <Link
+            href="/agents/shared_state"
+            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+          >
+            Try Shared State Agent →
           </Link>
         </div>
       </div>
