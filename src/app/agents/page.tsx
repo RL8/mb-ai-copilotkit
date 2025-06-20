@@ -107,8 +107,10 @@ export default function AgentsPage() {
                 <span className="text-sm">Phase 5: Shared State - <strong>Implemented</strong></span>
               </div>
               <div className="flex items-center space-x-2">
-                <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
-                <span className="text-sm text-gray-600">Phase 6: Tool-based UI - Coming Next</span>
+                <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </div>
+                <span className="text-sm">Phase 6: Tool-based UI - <strong>Implemented</strong></span>
               </div>
           </div>
         </div>
@@ -151,13 +153,13 @@ export default function AgentsPage() {
 
         {/* Instructions */}
         <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-          <h3 className="text-lg font-semibold text-green-800 mb-2">📋 Phase 3 Ready for Testing</h3>
+          <h3 className="text-lg font-semibold text-green-800 mb-2">🎉 All 6 Phases Complete!</h3>
           <div className="text-sm text-green-700 space-y-1">
-            <p>1. Test all three agents: <strong>Agentic Chat</strong>, <strong>Generative UI</strong>, and <strong>Human-in-Loop</strong></p>
-            <p>2. Try approval workflows - create processes that need human oversight</p>
-            <p>3. Test UI generation and collaborative decision-making</p>
-            <p>4. Verify functionality both locally and on Vercel deployment</p>
-            <p>5. Ready to proceed to Phase 4 once testing is complete</p>
+            <p>1. <strong>Complete System:</strong> All 6 AI agents are now implemented and operational</p>
+            <p>2. <strong>Tool-based UI:</strong> Generate forms, charts, tables, and cards with natural language</p>
+            <p>3. <strong>Multi-agent Coordination:</strong> Shared state and collaborative workflows</p>
+            <p>4. <strong>Advanced Features:</strong> Predictive analysis, human-in-loop approvals, dynamic UI generation</p>
+            <p>5. <strong>Ready for Production:</strong> Full system testing and Vercel deployment</p>
           </div>
         </div>
 
@@ -196,6 +198,25 @@ export default function AgentsPage() {
             className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
           >
             Try Shared State Agent →
+          </Link>
+        </div>
+
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold mb-3">🛠️ Phase 6: Tool-based Generative UI Agent</h3>
+          <p className="text-gray-600 mb-4">
+            Specialized tools for dynamic UI component generation with intelligent parameter extraction from natural language.
+          </p>
+          <div className="space-y-2 mb-4">
+            <div className="text-sm text-green-600 font-medium">✅ Status: Implemented & Available</div>
+            <div className="text-sm text-gray-500">
+              <strong>Capabilities:</strong> Form builder, chart generator, table builder, card designer, smart parameter extraction
+            </div>
+          </div>
+          <Link
+            href="/agents/tool_ui"
+            className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
+          >
+            Try Tool-based UI Agent →
           </Link>
         </div>
       </div>

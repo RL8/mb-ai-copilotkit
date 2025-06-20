@@ -5,6 +5,7 @@ import { GenerativeUIAgent } from './generative-ui';
 import { HumanLoopAgent } from './human-loop';
 import { PredictiveStateAgent } from './predictive-state';
 import { SharedStateAgent } from './shared-state';
+import { ToolUIAgent } from './tool-ui';
 
 export class AgentRouter {
   private agents: Map<AgentType, BaseAgent> = new Map();
@@ -23,15 +24,13 @@ export class AgentRouter {
   }
 
   private initializeAgents(): void {
-    // Phase 1, 2 & 3 agents
+    // All 6 phases implemented
     this.agents.set('agentic_chat', new AgenticChatAgent());
     this.agents.set('generative_ui', new GenerativeUIAgent());
     this.agents.set('human_loop', new HumanLoopAgent());
     this.agents.set('predictive_state', new PredictiveStateAgent());
     this.agents.set('shared_state', new SharedStateAgent());
-    
-    // Placeholder for future agents (will be implemented in later phases)
-    // this.agents.set('tool_ui', new ToolUIAgent());
+    this.agents.set('tool_ui', new ToolUIAgent());
   }
 
   async processMessage(message: string, targetAgent?: AgentType): Promise<AgentResponse> {
@@ -92,7 +91,7 @@ export class AgentRouter {
 
   async switchAgent(newAgent: AgentType): Promise<void> {
     if (!this.agents.has(newAgent)) {
-      throw new Error(`Agent ${newAgent} is not available yet. Currently 'agentic_chat', 'generative_ui', 'human_loop', 'predictive_state', and 'shared_state' are implemented.`);
+      throw new Error(`Agent ${newAgent} is not available. All 6 agents are implemented: 'agentic_chat', 'generative_ui', 'human_loop', 'predictive_state', 'shared_state', and 'tool_ui'.`);
     }
 
     const previousAgent = this.currentAgent;
@@ -186,6 +185,14 @@ export class AgentRouter {
         suggestedAgent: 'shared_state',
         confidence: 0.8,
         reason: 'Message involves coordination - Shared State agent for multi-agent collaboration'
+      };
+    }
+    
+    if (lowerMessage.includes('form') || lowerMessage.includes('chart') || lowerMessage.includes('table') || lowerMessage.includes('tool') || lowerMessage.includes('widget')) {
+      return {
+        suggestedAgent: 'tool_ui',
+        confidence: 0.9,
+        reason: 'Message requests specific UI components - Tool-based UI agent specializes in component generation'
       };
     }
     
