@@ -2,7 +2,9 @@
 
 import { CopilotKit } from "@copilotkit/react-core";
 import { CopilotChat } from "@copilotkit/react-ui";
+import Image from "next/image";
 
+{/* GitHub-to-Vercel integration test - deployment working! */}
 export default function Home() {
   return (
     <CopilotKit runtimeUrl="/api/copilotkit">
