@@ -2,6 +2,7 @@
 
 import { CopilotKit } from "@copilotkit/react-core";
 import { CopilotChat } from "@copilotkit/react-ui";
+import { Version } from "@/components/Version";
 import Image from "next/image";
 
 {/* GitHub-to-Vercel integration test - deployment working! */}
@@ -70,6 +71,9 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
+        {/* Version Component */}
+        <Version />
       </div>
     </CopilotKit>
   );
