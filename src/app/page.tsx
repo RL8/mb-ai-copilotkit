@@ -31,10 +31,10 @@ export default function Home() {
               <div className="bg-white p-4 rounded-lg shadow-sm">
                 <h3 className="font-medium text-gray-800 mb-2">💡 Try These:</h3>
                 <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• "Hello, how are you?"</li>
-                  <li>• "What is AG-UI?"</li>
-                  <li>• "Explain LangChain"</li>
-                  <li>• "Help me with a task"</li>
+                  <li>• &ldquo;Hello, how are you?&rdquo;</li>
+                  <li>• &ldquo;What is AG-UI?&rdquo;</li>
+                  <li>• &ldquo;Explain LangChain&rdquo;</li>
+                  <li>• &ldquo;Help me with a task&rdquo;</li>
                 </ul>
               </div>
               
