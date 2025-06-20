@@ -2,12 +2,12 @@ import { CopilotRuntime, OpenAIAdapter, copilotRuntimeNextJSAppRouterEndpoint } 
 import { NextRequest } from "next/server";
 import OpenAI from "openai";
 
-// Initialize OpenAI client
+// Initialize OpenAI client properly
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || "dummy-key-for-demo",
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
-// Create the runtime
+// Create the runtime with actions
 const runtime = new CopilotRuntime({
   actions: () => [
     {
@@ -28,10 +28,10 @@ const runtime = new CopilotRuntime({
   ],
 });
 
-// Create the service adapter
+// Create the service adapter correctly
 const serviceAdapter = new OpenAIAdapter({ 
   openai,
-  model: process.env.OPENAI_API_KEY ? "gpt-3.5-turbo" : undefined,
+  model: "gpt-3.5-turbo", // Use a consistent model
 });
 
 // Handle CORS preflight requests
@@ -49,6 +49,24 @@ export async function OPTIONS() {
 // Main POST handler using CopilotKit runtime
 export const POST = async (req: NextRequest) => {
   try {
+    // Check if API key is configured
+    if (!process.env.OPENAI_API_KEY) {
+      console.error("OPENAI_API_KEY is not configured");
+      return new Response(
+        JSON.stringify({ 
+          error: "OpenAI API key not configured",
+          message: "Please set OPENAI_API_KEY environment variable"
+        }),
+        {
+          status: 500,
+          headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+          },
+        }
+      );
+    }
+
     const { handleRequest } = copilotRuntimeNextJSAppRouterEndpoint({
       runtime,
       serviceAdapter,
