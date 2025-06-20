@@ -251,7 +251,7 @@ I'm designed for complex, multi-turn conversations - the more context you give m
     };
   }
 
-  private generateReasoning(message: string, intents: string[], context: any): string[] {
+  private generateReasoning(message: string, intents: string[], context: { hasContext: boolean; summary: string; conversationHistory: string }): string[] {
     const reasoning: string[] = [];
     
     reasoning.push(`• **Intent Analysis**: ${intents.length > 0 ? intents.join(', ') : 'general_inquiry'}`);

@@ -71,7 +71,7 @@ export default function AgentsPage() {
           disabled={isLoading}
         />
 
-        {/* Phase 1 Status */}
+        {/* Implementation Status */}
         <div className="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
           <h3 className="text-lg font-semibold text-blue-900 mb-2">🚀 Implementation Status</h3>
           <div className="space-y-2">
@@ -82,12 +82,14 @@ export default function AgentsPage() {
               <span className="text-sm">Phase 1: Agentic Chat - <strong>Implemented</strong></span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
-              <span className="text-sm text-gray-600">Phase 2: Generative UI - Coming Next</span>
+              <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-xs">✓</span>
+              </div>
+              <span className="text-sm">Phase 2: Generative UI - <strong>Implemented</strong></span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
-              <span className="text-sm text-gray-600">Phase 3: Human in Loop - Coming Soon</span>
+              <span className="text-sm text-gray-600">Phase 3: Human in Loop - Coming Next</span>
             </div>
             <div className="flex items-center space-x-2">
               <div className="w-4 h-4 bg-gray-300 rounded-full"></div>
@@ -109,21 +111,26 @@ export default function AgentsPage() {
             </p>
           </button>
 
-          <div className="p-4 bg-gray-100 border rounded-lg text-left opacity-50">
-            <h3 className="font-semibold text-gray-500 mb-2">🎨 Generative UI (Phase 2)</h3>
-            <p className="text-sm text-gray-500">
-              Dynamic UI generation will be available after Phase 1 testing
+          <button
+            onClick={() => goToAgentDemo('generative_ui')}
+            disabled={!availableAgents.includes('generative_ui')}
+            className="p-4 bg-white border rounded-lg hover:bg-gray-50 transition-colors text-left"
+          >
+            <h3 className="font-semibold text-purple-600 mb-2">🎨 Try Generative UI</h3>
+            <p className="text-sm text-gray-600">
+              Create dynamic React components with AI-powered code generation
             </p>
-          </div>
+          </button>
         </div>
 
         {/* Instructions */}
-        <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-          <h3 className="text-lg font-semibold text-yellow-800 mb-2">📋 Next Steps</h3>
-          <div className="text-sm text-yellow-700 space-y-1">
-            <p>1. Test the <strong>Agentic Chat</strong> agent by clicking &quot;Try Agentic Chat&quot; above</p>
-            <p>2. Verify functionality both locally and on Vercel deployment</p>
-            <p>3. Once Phase 1 testing is complete, we&apos;ll proceed to Phase 2</p>
+        <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
+          <h3 className="text-lg font-semibold text-green-800 mb-2">📋 Phase 2 Ready for Testing</h3>
+          <div className="text-sm text-green-700 space-y-1">
+            <p>1. Test both <strong>Agentic Chat</strong> and <strong>Generative UI</strong> agents</p>
+            <p>2. Try the UI generation features - ask for forms, buttons, cards, etc.</p>
+            <p>3. Verify functionality both locally and on Vercel deployment</p>
+            <p>4. Ready to proceed to Phase 3 once testing is complete</p>
           </div>
         </div>
       </div>
