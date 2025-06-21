@@ -1,0 +1,122 @@
+[
+  {
+    "status": "poor_response",
+    "agent": "agentic_chat",
+    "userMessage": "What are the key steps to build an e-commerce website?",
+    "agentResponse": "🎯 Capabilities:• Advanced reasoning and analysis• Business strategy consultation• Complex problem breakdown• Step-by-step guidance• Strategic planning assistance🔧 Best Practices:• Ask complex, open-ended questions• Request detailed analysis• Seek strategic recommendations• Ask for reasoning explanations• Request step-by-step breakdowns",
+    "validation": {
+      "score": 2,
+      "status": "fair",
+      "strengths": [
+        "Substantial response length",
+        "Contextual response"
+      ],
+      "issues": [
+        "Low keyword relevance (1/6)",
+        "Lacks AI reasoning patterns"
+      ]
+    },
+    "timestamp": "2025-06-21T02:26:36.070Z",
+    "url": "https://mb-ai.vercel.app/agents/agentic_chat"
+  },
+  {
+    "status": "poor_response",
+    "agent": "generative_ui",
+    "userMessage": "Create a contact form with name, email and message fields",
+    "agentResponse": "🎨 Generative UI AgentAI that creates dynamic React components and user interfaces based on your natural language descriptions.",
+    "validation": {
+      "score": 2,
+      "status": "fair",
+      "strengths": [
+        "Contextual response",
+        "Shows AI reasoning"
+      ],
+      "issues": [
+        "Response too short",
+        "Low keyword relevance (1/6)"
+      ]
+    },
+    "timestamp": "2025-06-21T02:26:54.065Z",
+    "url": "https://mb-ai.vercel.app/agents/generative_ui"
+  },
+  {
+    "status": "success",
+    "agent": "human_loop",
+    "userMessage": "I need approval to implement user authentication system",
+    "agentResponse": "🤝 Human-in-Loop AgentCollaborative AI that creates workflows with human oversight, approval checkpoints, and review processes.",
+    "validation": {
+      "score": 3,
+      "status": "good",
+      "strengths": [
+        "Relevant keywords (4/5)",
+        "Contextual response"
+      ],
+      "issues": [
+        "Response too short",
+        "Lacks AI reasoning patterns"
+      ]
+    },
+    "timestamp": "2025-06-21T02:27:12.199Z",
+    "url": "https://mb-ai.vercel.app/agents/human_loop"
+  },
+  {
+    "status": "success",
+    "agent": "predictive_state",
+    "userMessage": "What are the likely outcomes if we launch this feature next month?",
+    "agentResponse": "🔮 Predictive State AgentFuture-aware AI that analyzes current conditions to forecast likely scenarios and provide proactive recommendations.",
+    "validation": {
+      "score": 3,
+      "status": "good",
+      "strengths": [
+        "Relevant keywords (4/6)",
+        "Contextual response"
+      ],
+      "issues": [
+        "Response too short",
+        "Lacks AI reasoning patterns"
+      ]
+    },
+    "timestamp": "2025-06-21T02:27:31.226Z",
+    "url": "https://mb-ai.vercel.app/agents/predictive_state"
+  },
+  {
+    "status": "poor_response",
+    "agent": "shared_state",
+    "userMessage": "Create a project called Customer Portal and add initial tasks",
+    "agentResponse": "🤝 Shared State AgentMulti-agent coordination specialist that manages shared state, facilitates collaboration, and synchronizes team workflows.",
+    "validation": {
+      "score": 1,
+      "status": "poor",
+      "strengths": [
+        "Contextual response"
+      ],
+      "issues": [
+        "Response too short",
+        "Low keyword relevance (1/5)",
+        "Lacks AI reasoning patterns"
+      ]
+    },
+    "timestamp": "2025-06-21T02:27:50.241Z",
+    "url": "https://mb-ai.vercel.app/agents/shared_state"
+  },
+  {
+    "status": "poor_response",
+    "agent": "tool_ui",
+    "userMessage": "Generate a login form with email validation and password strength indicator",
+    "agentResponse": "🛠️ Tool-based Generative UI AgentSpecialized AI that creates interactive forms, charts, and components based on your natural language requests.",
+    "validation": {
+      "score": 2,
+      "status": "fair",
+      "strengths": [
+        "Contextual response",
+        "Shows AI reasoning"
+      ],
+      "issues": [
+        "Response too short",
+        "Low keyword relevance (2/6)"
+      ]
+    },
+    "timestamp": "2025-06-21T02:28:10.414Z",
+    "url": "https://mb-ai.vercel.app/agents/tool_ui"
+  }
+]
